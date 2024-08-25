@@ -1,19 +1,45 @@
+import React, { useState, useEffect } from "react";
 import RowComponent from "./components/RowComponent";
 import calculateBPEStep from "./utils";
 
 const BPEVisualization: React.FC = () => {
-  const originalText = [1, 4, 7, 5, 1, 4, 7];
+  const [inputText, setInputText] = useState("halli hallo");
+  const [tokenLists, setTokenLists] = useState<number[][]>([]);
 
-  const others = [originalText];
-  while (others[others.length - 1].length > 1) {
-    // last element should have only 1 token
-    others.push(calculateBPEStep(others[others.length - 1]));
-  }
+  useEffect(() => {
+    if (inputText) {
+      const initialTokens = inputText
+        .split("")
+        .map((char) => char.charCodeAt(0));
+      const newTokenLists = [initialTokens];
+
+      while (newTokenLists[newTokenLists.length - 1].length > 1) {
+        newTokenLists.push(
+          calculateBPEStep(newTokenLists[newTokenLists.length - 1])
+        );
+      }
+
+      setTokenLists(newTokenLists);
+    } else {
+      setTokenLists([]);
+    }
+  }, [inputText]);
 
   return (
     <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
       <h2>BPE Visualization:</h2>
-      {others.map((list, index) => (
+      <input
+        type="text"
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+        style={{
+          width: "100%",
+          padding: "10px",
+          marginBottom: "20px",
+          fontSize: "16px",
+        }}
+      />
+      {tokenLists.map((list, index) => (
         <div
           key={index}
           style={{
@@ -22,16 +48,6 @@ const BPEVisualization: React.FC = () => {
             marginBottom: "20px",
           }}
         >
-          <div
-            style={{
-              width: "80px",
-              marginRight: "20px",
-              textAlign: "right",
-              fontWeight: "bold",
-            }}
-          >
-            {index === 0 ? "Original:" : `Step ${index}:`}
-          </div>
           <RowComponent characters={list} />
         </div>
       ))}
