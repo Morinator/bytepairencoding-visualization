@@ -2,6 +2,8 @@
 
 This project is a simple visualization of Byte Pair Encoding (BPE) using React and Vite.
 
+Visit https://bytepairencoding.netlify.app/ to try it out.
+
 ## Technologies Used
 
 - React
@@ -11,8 +13,8 @@ This project is a simple visualization of Byte Pair Encoding (BPE) using React a
 
 ### Prerequisites
 
-- Node.js (version X.X.X or higher)
-- npm (version X.X.X or higher)
+- Node.js
+- npm 
 
 ### Installation
 
