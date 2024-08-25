@@ -1,8 +1,57 @@
-# React + Vite
+# Byte Pair Encoding Visualization
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple visualization of Byte Pair Encoding (BPE) using React and Vite.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Vite
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version X.X.X or higher)
+- npm (version X.X.X or higher)
+
+### Installation
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/your-username/your-project-name.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```
+   cd your-project-name
+   ```
+
+3. Install dependencies:
+   ```
+   npm install
+   ```
+
+### Development
+
+To run the development server:
+
+```
+npm run dev
+```
+
+### Building
+
+To build the project for production:
+
+```
+npm run build
+```
+
+You can test the built files locally by serving the `dist` directory with a static file server. For example, you can use the `serve` package:
+
+```
+npm install -g serve
+serve dist
+```
