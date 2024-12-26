@@ -3,7 +3,7 @@ import RowComponent from "./components/RowComponent";
 import calculateBPEStep from "./utils";
 
 const BPEVisualization: React.FC = () => {
-  const [inputText, setInputText] = useState("halli hallo");
+  const [inputText, setInputText] = useState("this that");
   const [tokenLists, setTokenLists] = useState<number[][]>([]);
 
   useEffect(() => {
