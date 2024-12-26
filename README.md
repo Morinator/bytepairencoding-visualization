@@ -1,59 +1,8 @@
 # Byte Pair Encoding Visualization
 
-This project is a simple visualization of Byte Pair Encoding (BPE) using React and Vite.
+This project is visualizes the fitting Byte Pair Encoding (BPE) on a given text.
+I created it while studying the subject with a [video](https://www.youtube.com/watch?v=zduSFxRajkE) by Andrej Karpathy.
 
-Visit https://bytepairencoding.netlify.app/ to try it out.
+You can either run this project locally using `npm run dev` etc. or use https://bytepairencoding.netlify.app/
 
-## Technologies Used
-
-- React
-- Vite
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js
-- npm 
-
-### Installation
-
-1. Clone the repository:
-
-   ```
-   git clone https://github.com/your-username/your-project-name.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```
-   cd your-project-name
-   ```
-
-3. Install dependencies:
-   ```
-   npm install
-   ```
-
-### Development
-
-To run the development server:
-
-```
-npm run dev
-```
-
-### Building
-
-To build the project for production:
-
-```
-npm run build
-```
-
-You can test the built files locally by serving the `dist` directory with a static file server. For example, you can use the `serve` package:
-
-```
-npm install -g serve
-serve dist
-```
+![image](https://github.com/user-attachments/assets/6f8b9fca-b092-44f6-96a3-0815e5b997a4)
